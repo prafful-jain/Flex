@@ -1,0 +1,55 @@
+
+:root {
+    --font-body: -apple-system,BlinkMacSystemFont,Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    --background-gray: #0c161d; 
+}
+
+h1, h2, h3, h4, p , blockquote, ul, label{
+    font-family: var(--font-body);
+    color: var(--background-gray);
+}
+html {
+    background-color: #e6e7ee;
+}
+body{
+    margin: 3rem 0;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+.quote{
+    padding: 50px 50px;
+    background: #e6e7ee;
+    border: 1px solid var(--background-gray-offset);
+    color: #31344b;
+    border-radius: 5px;
+    margin: auto 0;
+    box-shadow: 6px 6px 12px #b8b9be,-6px -6px 12px #fff!important;
+}
+code, pre {
+    color: #202124;
+    hyphens: none;
+    tab-size: 2;
+    text-align: left;
+    word-spacing: normal;
+    border-radius: 5px;
+}
+pre, pre[class*=language-] {
+    border-width: 1px 0;
+    overflow: auto;
+    padding: 35px 35px 0;
+    white-space: pre;
+    scrollbar-color: #80868b transparent;
+    scrollbar-width: thin;
+    box-shadow: 6px 6px 12px #b8b9be,-6px -6px 12px #fff!important;
+
+}
+@media (min-width:768px) and (max-width:1023px){
+    body{
+        font-size: 1.2rem;
+    }  
+}
+@media (max-width:767px){
+    body{
+        font-size: 1rem;
+    }    
+}
