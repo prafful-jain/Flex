@@ -2,13 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex vs Grid</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="primary.css">
+    <link rel="stylesheet" href="grid.css" media="only screen and (max-width: 767px)">
 </head>
 
 <body>
@@ -79,9 +76,9 @@
 
             <div>
                 <h3 class="underline">Controlling the direction of items</h3>
-                <p> Even though you haven't added a <strong>flex-direction</strong> property yet, the items display
+                <p> Even though we haven't added a <strong>flex-direction</strong> property yet, the items display
                     as a row because the initial value of <strong>flex-direction</strong> is <strong>row</strong>.
-                    If you want a row then you don't need to add the property. To change the direction, add the
+                    If we want a row then we don't need to add the property. To change the direction, add the
                     property and one of the four values:</p>
                 <ul>
                     <li><strong>row:</strong> the items lay out as a row.</li>
@@ -117,6 +114,10 @@
             </div>
             <div>
                 <h3 class="underline">Wrapping flex items</h3>
+                <p>The flex-wrap property is a sub-property of the Flexible Box Layout module.
+
+                    It defines whether the flex items are forced in a single line or can be flowed into multiple lines.</p>
+                    <p>To cause wrapping behavior add the property flex-wrap with a value of wrap. Now,if items will be too large to all display in one line, they will wrap onto another line.</p>
                 <!-- ========================================================== -->
                 <main>
                     <div class="wrapper">
@@ -149,7 +150,9 @@
             <div style="margin-top: 60px;">
                 <blockquote class="quote">
                     <p class="underline">The flex-flow shorthand</p>
-                    You can set the flex-direction and flex-wrap properties using the shorthand flex-flow. For example,
+                    We can set the flex-direction and flex-wrap properties using the shorthand flex-flow. 
+                    The first value specified is flex-direction and the second value is flex-wrap
+                    <br>For example,
                     to
                     set flex-direction to column and allow items to wrap:
 
@@ -160,8 +163,8 @@
             <div>
                 <h3 class="underline">Flexbox alignment overview</h3>
                 <p>Flexbox brought with it a set of properties for aligning items and distributing space between items.
-                    These properties were so useful they have since been moved into their own specification, you'll
-                    encounter them in Grid Layout too. Here you can find out how they work when you are using flexbox.
+                    These properties were so useful they have since been moved into their own specification, we'll
+                    encounter them in Grid Layout too. Here we can find out how they work when we are using flexbox.
                 </p>
 
                 <p>The set of properties can be placed into two groups. Properties for space distribution, and
@@ -180,7 +183,7 @@
                     <li><strong>align-items: </strong>aligns all of the items as a group on the cross axis</li>
                 </ul>
 
-                <p class="highlight"> &nbsp;&nbsp;&nbsp;&nbsp;If you are working on the main axis then the properties
+                <p class="highlight"> &nbsp;&nbsp;&nbsp;&nbsp;If we are working on the main axis then the properties
                     begin with justify-. On the cross axis they begin with align-.</p>
 
                 <h3 class="underline">Distributing space on the main axis</h3>
@@ -210,11 +213,11 @@
                     </div>
                 </main>
                 <!-- ========================================================== -->
-                <p class="highlight"> &nbsp;&nbsp;&nbsp;&nbsp;For the justify-content property to do anything you have
-                    to have spare space in your container on the main axis. If your items fill the axis then there is no
+                <p class="highlight"> &nbsp;&nbsp;&nbsp;&nbsp;For the justify-content property to do anything we have
+                    to have spare space in our container on the main axis. If our items fill the axis then there is no
                     space to share out so the property won't do anything.</p>
 
-                <h3 class="underline">Distributing space between flex lines</h3>
+                <h3 class="underline">Distributing space between cross axis(flex lines)</h3>
                 <!-- ========================================================== -->
                 <main>
                     <div class="wrapper">
@@ -246,14 +249,11 @@
                     </div>
                 </main>
                 <!-- ========================================================== -->
-                <p class="highlight"> &nbsp;&nbsp;&nbsp;&nbsp;For the justify-content property to do anything you have
-                    to have spare space in your container on the main axis. If your items fill the axis then there is no
-                    space to share out so the property won't do anything.</p>
-
+               <p></p>
                 <blockquote class="quote">
                     <p class="underline">The place-content shorthand</p>
-                    <p>To set both justify-content and align-content you can use place-content with one or two values. A
-                        single value will be used for both axes, if you specify both the first is used for align-content
+                    <p>To set both justify-content and align-content we can use place-content with one or two values. A
+                        single value will be used for both axes, if we specify both the first is used for align-content
                         and the second for justify-content.</p>
                     <pre class="language-css"><code class="language-css"><span class="token selector">.flex-container</span> <span class="token punctuation">{</span><br>  <span class="token property">place-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span><br>  <span class="token comment">/* sets both to space-between */</span><br><span class="token punctuation">}</span><br><br><span class="token selector">.flex-container</span> <span class="token punctuation">{</span><br>  <span class="token property">place-content</span><span class="token punctuation">:</span> center flex-end<span class="token punctuation">;</span><br>  <span class="token comment">/* wrapped lines on the cross axis are centered,<br>  on the main axis items are aligned to the end of the flex container */</span><br><span class="token punctuation">}</span></code>
                     </pre>
@@ -262,12 +262,12 @@
 
             <div>
                 <h3 class="underline">Aligning items on the cross-axis</h3>
-                <p>On the cross axis you can also align your items within the flex line using align-items and
+                <p>On the cross axis we can also align our items within the flex line using align-items and
                     align-self. The space available for this alignment will depend on the height of the flex container,
                     or flex line in the case of a wrapped set of items.</p>
 
                 <p> The initial value of align-self is stretch, which is why flex items in a row stretch to the height
-                    of the tallest item by default. To change this, add the align-self property to any of your flex
+                    of the tallest item by default. To change this, add the align-self property to any of our flex
                     items.</p>
                 <pre class="language-css"><code class="language-css"><span class="token selector">.flex-container</span> <span class="token punctuation">{</span><br>  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token selector">.item1</span> <span class="token punctuation">{</span><br>  <span class="token property">align-self</span><span class="token punctuation">:</span> flex-start<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code>
                 </pre>
@@ -307,7 +307,7 @@
                     <div class="wrapper">
                         <div class="controls">
                             <label>
-                                Item one’s align-self
+                                Align all items throught parent's property
                                 <select id="alignItems-switcher">
                                     <option value="stretch">stretch</option>
                                     <option value="flex-start">flex-start</option>
@@ -334,7 +334,6 @@
                     <li>flex-grow</li>
                     <li>flex-shrink</li>
                     <li>flex</li>
-                    <li>order</li>
                 </ul>
                 <h3 class="underline">Flex basis</h3>
                 <p>We can use flex-basis to set the main size of a flex item. This is like specifying a width for the
@@ -396,7 +395,7 @@
 
                 <blockquote class="quote">
                     <p class="underline">The Flex shorthand</p>
-                    <p>Just as for the flex container, you also have a shorthand for flex items. This sets the following
+                    <p>Just as for the flex container, we also have a shorthand for flex items. This sets the following
                         properties for a child element, in the following order:
                     <ul>
                         <li>flex-gorw</li>
