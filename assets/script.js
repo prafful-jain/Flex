@@ -79,3 +79,20 @@ getFlexGrowthird.onkeyup = function ()  {
     demo9.style.flexGrow = getFlexGrowthird.value;
 }
 // !-- ======================= --
+
+
+// !-- for flex-Grow -
+const getFlexShrink = document.getElementById("getFlexShrink");
+var demo10 = document.getElementById("boxshrink1");
+
+getFlexShrink.onkeyup = function ()  {
+    demo10.style.flexShrink = getFlexShrink.value;
+}
+
+const getFlexShrinkSecond = document.getElementById("getFlexShrinkSecond");
+var demo11 = document.getElementById("boxshrink2");
+
+getFlexShrinkSecond.onkeyup = function ()  {
+    demo11.style.flexShrink = getFlexShrinkSecond.value;
+}
+// !-- ======================= --

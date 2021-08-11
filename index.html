@@ -116,8 +116,10 @@
                 <h3 class="underline">Wrapping flex items</h3>
                 <p>The flex-wrap property is a sub-property of the Flexible Box Layout module.
 
-                    It defines whether the flex items are forced in a single line or can be flowed into multiple lines.</p>
-                    <p>To cause wrapping behavior add the property flex-wrap with a value of wrap. Now,if items will be too large to all display in one line, they will wrap onto another line.</p>
+                    It defines whether the flex items are forced in a single line or can be flowed into multiple lines.
+                </p>
+                <p>To cause wrapping behavior add the property flex-wrap with a value of wrap. Now,if items will be too
+                    large to all display in one line, they will wrap onto another line.</p>
                 <!-- ========================================================== -->
                 <main>
                     <div class="wrapper">
@@ -150,7 +152,7 @@
             <div style="margin-top: 60px;">
                 <blockquote class="quote">
                     <p class="underline">The flex-flow shorthand</p>
-                    We can set the flex-direction and flex-wrap properties using the shorthand flex-flow. 
+                    We can set the flex-direction and flex-wrap properties using the shorthand flex-flow.
                     The first value specified is flex-direction and the second value is flex-wrap
                     <br>For example,
                     to
@@ -249,7 +251,7 @@
                     </div>
                 </main>
                 <!-- ========================================================== -->
-               <p></p>
+                <p></p>
                 <blockquote class="quote">
                     <p class="underline">The place-content shorthand</p>
                     <p>To set both justify-content and align-content we can use place-content with one or two values. A
@@ -334,6 +336,7 @@
                     <li>flex-grow</li>
                     <li>flex-shrink</li>
                     <li>flex</li>
+                    <li>order</li>
                 </ul>
                 <h3 class="underline">Flex basis</h3>
                 <p>We can use flex-basis to set the main size of a flex item. This is like specifying a width for the
@@ -353,7 +356,7 @@
                         <div class="controls">
                             <label>
                                 Flex basis on Item one
-                                <input type="text" placeholder="enter value" id="getFlexBasis">
+                                <input type="text" placeholder="Enter Value" id="getFlexBasis">
                             </label>
                         </div>
                         <div class="flexBasis-container flex-container">
@@ -374,8 +377,8 @@
                         <div class="controls">
                             <label>
                                 Flex grow on Item second and third
-                                <input type="text" placeholder="enter value for second" id="getFlexgrow">
-                                <input type="text" placeholder="enter value for third" id="getFlexgrowthrid">
+                                <input type="text" placeholder="Enter value for Second" id="getFlexgrow">
+                                <input type="text" placeholder="Enter value for Third" id="getFlexgrowthrid">
                             </label>
                         </div>
                         <div class="flexGrow-container flex-container">
@@ -393,6 +396,28 @@
                 <p>The flex-shrink property defines how much should a flex item shrink relative to other items if
                     there's not enough space inside the container. By default, this is set to 1.</p>
 
+                <!-- ========================================================== -->
+                <main>
+                    <div class="wrapper">
+                        <div class="controls">
+                            <label>
+                                Flex shrink on Item first and second
+                                <input type="text" placeholder="Enter value for First" id="getFlexShrink">
+                                <input type="text" placeholder="Enter value for Second" id="getFlexShrinkSecond">
+                            </label>
+                        </div>
+                        <div class="flexshrink-container flex-container">
+                            <div class="box" id="boxshrink1">1</div>
+                            <div class="box" id="boxshrink2">2</div>
+                            <div class="box">3</div>
+                            <div class="box">4</div>
+                        </div>
+                        </article>
+                    </div>
+                </main>
+                <!-- ========================================================== -->
+
+
                 <blockquote class="quote">
                     <p class="underline">The Flex shorthand</p>
                     <p>Just as for the flex container, we also have a shorthand for flex items. This sets the following
@@ -407,7 +432,8 @@
         <span class="token property">flex</span><span class="token punctuation">:</span> 1 1 100px<span class="token punctuation">;</span>  <span class="token punctuation">}
                     </pre>
                 </blockquote>
-            </div>
+
+
 
     </section>
 
